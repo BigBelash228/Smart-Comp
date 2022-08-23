@@ -1,0 +1,91 @@
+body{
+	background-image: url('../img/back_img.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+section{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.cross {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-image: url("../img/cross.svg");
+	background-size: contain;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.cross:hover {
+	background-image: url("../img/cross2.svg");
+}
+
+.cross:active{
+	background-image: url("../img/cross3.svg");
+}
+
+.connect-with-us{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.connect-input{
+	width: 30%;
+	padding: 1rem;
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0.5rem;
+	border-radius: 5px;
+}
+
+
+
+.content-holder{
+	background-color: rgba(0, 0, 0, 0.9);
+	width: 80%;
+	text-align: center;
+	position:relative
+}
+
+.send-button {
+	margin: auto;
+	width: 10%;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 6px;
+    box-shadow: #dedede 4px 4px 0 0,#000 4px 4px 0 1px;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 20px;
+    padding: 12px 40px;
+	display: flex;
+    justify-content: center;
+}
+
+ul{
+	list-style: none;
+}
+
+.send-button:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+
+.send-button:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
