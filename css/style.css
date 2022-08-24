@@ -368,15 +368,7 @@ summary:active{
     transition: all ease-in-out 0.5s;
 } 
 
-.slider-prev {
-    border: solid 2px;
-    background-color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 40px;
-    margin: 5px;
-}
-.slider-next  {
+.slider-prev, .slider-next {
     border: solid 2px;
     background-color: white;
     text-align: center;
@@ -385,22 +377,11 @@ summary:active{
     margin: 5px;
 }
 
-.slider-next:hover {
+.slider-next:hover, .slider-prev:hover {
 cursor: pointer;
 background-color:lightgray;
 }
-.slider-prev:hover{
-    cursor: pointer;
-    background-color:lightgray;
-}
-
-.slider-next:active {
-    cursor: pointer;
-    color: white;
-    background-color: black;
-}
-
-.slider-prev:active {
+.slider-next:active, .slider-prev:active {
     cursor: pointer;
     color: white;
     background-color: black;
