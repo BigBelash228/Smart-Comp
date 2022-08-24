@@ -63,6 +63,9 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
+    .partners-img-holder img {
+        width: 8rem;
+    }
     .slider-holder{
         width: 100%;
     }
