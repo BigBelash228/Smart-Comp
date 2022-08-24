@@ -10,7 +10,7 @@ AOS.init({
     throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
     
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 100, // offset (in px) from the original trigger point
+    offset: 90, // offset (in px) from the original trigger point
     delay: 0, // values from 0 to 3000, with step 50ms
     duration: 600, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
@@ -37,40 +37,61 @@ for (let anchor of anchors) {
 let offset = 0;
 const sliderLine = document.querySelector('.slider-line');
 
-document.querySelector('.slider-next').addEventListener('click', function(){
-    offset += 600;
-    if (offset>2400) {
-        offset=0
-    }
-    sliderLine.style.left = -offset + 'px';
-});
-
-document.querySelector('.slider-prev').addEventListener('click', function (){
-    offset -=600;
-    if (offset < 0){
-        offset=2400;
-    }
-    sliderLine.style.left = -offset + 'px';
-});
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    document.querySelector('.slider-next').addEventListener('click', function(){
+        offset += 200;
+        if (offset>800) {
+            offset=0
+        }
+        sliderLine.style.left = -offset + 'px';
+    });
+    document.querySelector('.slider-prev').addEventListener('click', function (){
+        offset -=200;
+        if (offset < 0){
+            offset=800;
+        }
+        sliderLine.style.left = -offset + 'px';
+    });
+}   else {
+    document.querySelector('.slider-next').addEventListener('click', function(){
+        offset += 600;
+        if (offset>2400) {
+            offset=0
+        }
+        sliderLine.style.left = -offset + 'px';
+    });
+    document.querySelector('.slider-prev').addEventListener('click', function (){
+        offset -=600;
+        if (offset < 0){
+            offset=2400;
+        }
+        sliderLine.style.left = -offset + 'px';
+    });
+}
 
 
 let tick = 0;
-window.setInterval( function (){
-    tick++;
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+} else {
+    window.setInterval( function (){
+        tick++;
         if (tick >= 10) {
-        $('.first-section').css('background-image', 'url("./img/first_section_img2.PNG")');
-        if (tick >= 20) {
-            $('.first-section').css('background-image', 'url("./img/first_section_img3.jpg")');
-            if (tick >= 30) {
-                $('.first-section').css('background-image', 'url("./img/first_section_img4.PNG")');
-                if (tick >= 40) {
-                    $('.first-section').css('background-image', 'url("./img/first_section_img1.jpg")');
-                    tick=0;
+            $('.first-section').css('background-image', 'url("./img/first_section_img2.PNG")');
+            if (tick >= 20) {
+                $('.first-section').css('background-image', 'url("./img/first_section_img3.jpg")');
+                if (tick >= 30) {
+                    $('.first-section').css('background-image', 'url("./img/first_section_img4.PNG")');
+                    if (tick >= 40) {
+                        $('.first-section').css('background-image', 'url("./img/first_section_img1.jpg")');
+                        tick=0;
+                    }
                 }
             }
         }
-    }
-}, 1000);
+    }, 1000);
+
+}
 
 
 
