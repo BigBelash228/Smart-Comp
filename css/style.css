@@ -8,7 +8,9 @@ body, html{
     font-weight: 400;
     font-size: 16px;
     width: 100%;
+    height: 100%;
 }
+
 
 #top{
     position: absolute;
@@ -78,7 +80,6 @@ header{
 .header-menu-li a:active{
     color: #000099;
 }
-
 .first-section{
     height: 80vh;
     background-image: url("../img/first_section_img1.jpg");
@@ -93,7 +94,6 @@ header{
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    /* animation-delay: 1s;  */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,12 +107,6 @@ background-size: 100%;
 background-size: 125%;
     }
 }
-.third-section-div-holder {
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-}
-
 .first-section-div{
     background: rgba(0, 0, 0, 0.7);
     padding: 2rem;
@@ -124,24 +118,11 @@ background-size: 125%;
 .first-section-div h1{
     font-size: 3rem;
 }
-
-
-
-.second-section{
-    margin-top: 4rem;
+.third-section-div-holder {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
 }
-
-.second-section-div p{
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
-    margin: 0.5rem;
-}
-.second-section-div p span{
-    font-size: 24px;
-    font-weight: 600;
-}
-
 .third-section{
     margin: 4rem auto 0;
     width: 90%;
@@ -152,9 +133,9 @@ background-size: 125%;
 }
 .third-section-top{
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
-    width: 95%;
+    margin-bottom: 1rem;
 }
 
 .third-section-div img{
@@ -300,7 +281,7 @@ background-size: 125%;
 }
 
 .partners-img-holder img {
-    width: 13%;
+    width: 8rem;
 }
 
 .cities-div{
@@ -358,6 +339,7 @@ summary:active{
     box-shadow: 0px 5px 5px black;
 }
 
+
 .slider-line {
     width: 3000px;
     height: 600px;
@@ -376,7 +358,6 @@ summary:active{
     font-size: 40px;
     margin: 5px;
 }
-
 .slider-next:hover, .slider-prev:hover {
 cursor: pointer;
 background-color:lightgray;
@@ -401,6 +382,7 @@ footer{
     display: flex;
     align-items: center;
     background-image: url("../img/scheme.jpg");
+    background-color: #000;
     background-size: 150%;
     background-repeat: no-repeat;
 }
@@ -449,4 +431,3 @@ text-decoration:underline;
 .footer-social-network a:active{
 color: #000099;
 }
-

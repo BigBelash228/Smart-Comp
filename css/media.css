@@ -74,6 +74,9 @@
         height: 200px;
         width: 1000px;
     }
+    .slider-prev, .slider-next{
+        font-size: 20px;
+    }
     footer{
         background-image: none;
         background-color: black;
